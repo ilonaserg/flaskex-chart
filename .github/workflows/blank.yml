@@ -15,8 +15,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Test kubectl
-        run: kubectl version
-
       - name: Test helm
         run: helm version
