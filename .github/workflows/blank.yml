@@ -23,7 +23,5 @@ jobs:
           token:      ${{ secrets.K8S_SA_TOKEN }}
           namespace:  myapp
 
-      - name: Test kubectl
-        run: |
-          kubectl version
-          kubectl get nodes
+      - name: Deploy Flaskex
+        run: helm upgrade --install -f customvalues.yaml myapp .
